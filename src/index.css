@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary-forest: #102A24;
+    --color-deep-evergreen: #081B16;
+    --color-bg-primary: #FFFFFF;
+    --color-bg-secondary: #F3F6F4;
+    --color-mint: #B8D8C0;
+    --color-sage: #789985;
+    --color-text-primary: #17251F;
+    --color-text-secondary: #69766F;
+    --color-border: #DDE4DB;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color: #17251F;
+    background-color: #FFFFFF;
+  }
+}
+
+/* Subtle forest geometric background grid pattern */
+.bg-forest-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(16, 42, 36, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(16, 42, 36, 0.035) 1px, transparent 1px);
+}
+
+.bg-dark-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(184, 216, 192, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(184, 216, 192, 0.05) 1px, transparent 1px);
+}
+
+/* Flow connector pulse keyframes */
+@keyframes dash-flow {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+
+.animate-flow {
+  animation: dash-flow 1.2s linear infinite;
+}
+
+@keyframes pulse-soft {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2.5s ease-in-out infinite;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .animate-flow,
+  .animate-pulse-soft {
+    animation: none !important;
+  }
+  html {
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F3F6F4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B8D8C0;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #789985;
+}
