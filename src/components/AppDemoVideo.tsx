@@ -64,7 +64,7 @@ export const AppDemoVideo: React.FC<AppDemoVideoProps> = ({ onOpenDemo }) => {
           <div className="relative aspect-video w-full bg-forest-dark flex items-center justify-center overflow-hidden rounded-2xl group">
             <video
               ref={videoRef}
-              src="https://res.cloudinary.com/egrg9gtv/video/upload/v1792059063/screening_workflow_video.mp4"
+              src="https://res.cloudinary.com/egrg9gtv/video/upload/v1792213554/WhatsApp_Video_2026-10-16_at_11.15.59_AM.mp4"
               controls
               playsInline
               preload="metadata"
