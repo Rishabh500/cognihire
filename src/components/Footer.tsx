@@ -5,11 +5,22 @@ import { Mail, ArrowUp } from 'lucide-react';
 interface FooterProps {
   onOpenDemo: () => void;
   onScrollToCalculator: () => void;
+  onOpenLegal?: (doc: 'privacy' | 'terms') => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onOpenDemo, onScrollToCalculator }) => {
+export const Footer: React.FC<FooterProps> = ({
+  onOpenDemo,
+  onScrollToCalculator,
+  onOpenLegal,
+}) => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleLegalClick = (doc: 'privacy' | 'terms') => {
+    if (onOpenLegal) {
+      onOpenLegal(doc);
+    }
   };
 
   return (
@@ -30,10 +41,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDemo, onScrollToCalculator
             <div className="pt-2 text-xs text-sage-light flex items-center gap-2">
               <Mail className="w-4 h-4 text-mint" />
               <a
-                href="mailto:contact@cognihire.com"
-                className="hover:text-white transition-colors underline decoration-forest-border"
+                href="mailto:contact@cognire.io"
+                className="hover:text-white transition-colors underline decoration-forest-border font-medium"
               >
-                contact@cognihire.com
+                contact@cognire.io
               </a>
             </div>
           </div>
@@ -111,19 +122,28 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDemo, onScrollToCalculator
             </h4>
             <ul className="space-y-2 text-xs text-sage-light">
               <li>
-                <a href="#workflow" className="hover:text-white transition-colors">
+                <button
+                  onClick={() => handleLegalClick('privacy')}
+                  className="hover:text-white transition-colors text-left"
+                >
                   Human Oversight Standards
-                </a>
+                </button>
               </li>
               <li>
-                <span className="text-white/70 cursor-pointer hover:text-white" onClick={onOpenDemo}>
+                <button
+                  onClick={() => handleLegalClick('privacy')}
+                  className="text-white/70 hover:text-white text-left transition-colors"
+                >
                   Candidate Consent Disclosures
-                </span>
+                </button>
               </li>
               <li>
-                <span className="text-white/70 cursor-pointer hover:text-white" onClick={onOpenDemo}>
+                <button
+                  onClick={() => handleLegalClick('privacy')}
+                  className="text-white/70 hover:text-white text-left transition-colors"
+                >
                   Data Retention Protocols
-                </span>
+                </button>
               </li>
             </ul>
 
@@ -143,11 +163,26 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDemo, onScrollToCalculator
           <div className="flex flex-wrap items-center gap-4 text-[11px]">
             <span>© 2026 CogniHire Technologies. All rights reserved.</span>
             <span className="text-forest-border">•</span>
-            <span className="hover:text-white cursor-pointer">Privacy Policy</span>
+            <button
+              onClick={() => handleLegalClick('privacy')}
+              className="hover:text-white hover:underline transition-colors"
+            >
+              Privacy Policy
+            </button>
             <span className="text-forest-border">•</span>
-            <span className="hover:text-white cursor-pointer">Terms of Service</span>
+            <button
+              onClick={() => handleLegalClick('terms')}
+              className="hover:text-white hover:underline transition-colors"
+            >
+              Terms and Conditions
+            </button>
             <span className="text-forest-border">•</span>
-            <span className="hover:text-white cursor-pointer">Responsible AI Statement</span>
+            <button
+              onClick={() => handleLegalClick('privacy')}
+              className="hover:text-white hover:underline transition-colors"
+            >
+              Responsible AI Statement
+            </button>
           </div>
 
           <button

@@ -9,12 +9,21 @@ import { FAQSection } from './components/FAQSection';
 import { FinalCTA } from './components/FinalCTA';
 import { Footer } from './components/Footer';
 import { DemoModal } from './components/DemoModal';
+import { LegalModal, LegalDocType } from './components/LegalModal';
 
 export const App: React.FC = () => {
   const [demoModalOpen, setDemoModalOpen] = useState(false);
+  const [legalModalOpen, setLegalModalOpen] = useState(false);
+  const [activeLegalDoc, setActiveLegalDoc] = useState<LegalDocType>('privacy');
 
   const handleOpenDemo = () => setDemoModalOpen(true);
   const handleCloseDemo = () => setDemoModalOpen(false);
+
+  const handleOpenLegal = (doc: LegalDocType = 'privacy') => {
+    setActiveLegalDoc(doc);
+    setLegalModalOpen(true);
+  };
+  const handleCloseLegal = () => setLegalModalOpen(false);
 
   const handleScrollToCalculator = () => {
     const el = document.getElementById('calculator');
@@ -77,14 +86,22 @@ export const App: React.FC = () => {
         />
       </main>
 
-      {/* 9. Minimal Footer */}
+      {/* 9. Minimal Footer with Privacy Policy & Terms Links */}
       <Footer
         onOpenDemo={handleOpenDemo}
         onScrollToCalculator={handleScrollToCalculator}
+        onOpenLegal={handleOpenLegal}
       />
 
       {/* Interactive Demo Booking Modal */}
       <DemoModal isOpen={demoModalOpen} onClose={handleCloseDemo} />
+
+      {/* Interactive Privacy Policy & Terms of Service Modal */}
+      <LegalModal
+        isOpen={legalModalOpen}
+        initialDoc={activeLegalDoc}
+        onClose={handleCloseLegal}
+      />
     </div>
   );
 };

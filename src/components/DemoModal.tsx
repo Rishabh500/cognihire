@@ -85,7 +85,7 @@ export const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose }) => {
                 <p className="text-[11px] text-ink-muted mb-4">
                   Need immediate access? Email us directly at{' '}
                   <a
-                    href={`mailto:contact@cognihire.com?subject=CogniHire Demo Request - ${encodeURIComponent(
+                    href={`mailto:contact@cognire.io?subject=CogniHire Demo Request - ${encodeURIComponent(
                       formData.company || 'New Partner'
                     )}&body=Hi CogniHire team,%0D%0A%0D%0AI would like to schedule a demo for ${encodeURIComponent(
                       formData.company
@@ -94,7 +94,7 @@ export const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose }) => {
                     )}%0D%0AVolume: ${encodeURIComponent(formData.volume)}`}
                     className="text-forest font-bold underline"
                   >
-                    contact@cognihire.com
+                    contact@cognire.io
                   </a>
                 </p>
                 <button
