@@ -1,0 +1,15 @@
+runtime: nodejs20
+instance_class: F1
+
+handlers:
+  # Serve static assets with caching
+  - url: /(assets|favicon\.ico|.*\.(?:js|css|png|jpg|jpeg|gif|svg|webp|ico|woff2?|ttf|eot))$
+    static_files: dist/\1
+    upload: dist/(assets|favicon\.ico|.*\.(?:js|css|png|jpg|jpeg|gif|svg|webp|ico|woff2?|ttf|eot))$
+    secure: always
+
+  # Catch-all rewrite for Single Page App routing (/privacy, /terms, etc.)
+  - url: /.*
+    static_files: dist/index.html
+    upload: dist/index.html
+    secure: always

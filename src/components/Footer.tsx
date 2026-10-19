@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { BrandLogo } from './BrandLogo';
 import { Mail, ArrowUp } from 'lucide-react';
 
@@ -163,26 +164,29 @@ export const Footer: React.FC<FooterProps> = ({
           <div className="flex flex-wrap items-center gap-4 text-[11px]">
             <span>© 2026 CogniHire Technologies. All rights reserved.</span>
             <span className="text-forest-border">•</span>
-            <button
+            <Link
+              to="/privacy"
               onClick={() => handleLegalClick('privacy')}
               className="hover:text-white hover:underline transition-colors"
             >
               Privacy Policy
-            </button>
+            </Link>
             <span className="text-forest-border">•</span>
-            <button
+            <Link
+              to="/terms"
               onClick={() => handleLegalClick('terms')}
               className="hover:text-white hover:underline transition-colors"
             >
               Terms and Conditions
-            </button>
+            </Link>
             <span className="text-forest-border">•</span>
-            <button
+            <Link
+              to="/privacy"
               onClick={() => handleLegalClick('privacy')}
               className="hover:text-white hover:underline transition-colors"
             >
               Responsible AI Statement
-            </button>
+            </Link>
           </div>
 
           <button
