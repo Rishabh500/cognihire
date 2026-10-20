@@ -118,10 +118,34 @@ export const LegalModal: React.FC<LegalModalProps> = ({
                 </ul>
               </div>
 
-              {/* Section 2 */}
+              {/* Section 2: Google User Data */}
+              <div className="p-4 rounded-2xl bg-forest-dark text-white space-y-3 border border-forest-border">
+                <h5 className="font-bold text-mint flex items-center gap-2 text-sm">
+                  <Lock className="w-4 h-4 text-mint" />
+                  2. Google API Services User Data Policy Compliance
+                </h5>
+                <p className="text-xs text-sage-light leading-relaxed">
+                  When you sign in with Google or link Google Workspace features, CogniHire accesses only your verified Google profile (name, email, profile photo) and, if authorized, calendar availability to schedule interviews.
+                </p>
+                <div className="p-3 rounded-xl bg-white/10 border border-mint/30 text-xs text-white leading-relaxed">
+                  <strong className="text-mint block mb-1">Google API Limited Use Disclosure:</strong>
+                  CogniHire&apos;s use and transfer to any other app of information received from Google APIs will adhere to the{' '}
+                  <a
+                    href="https://developers.google.com/terms/api-services-user-data-policy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-mint underline font-bold"
+                  >
+                    Google API Services User Data Policy
+                  </a>
+                  , including the Limited Use requirements. We never sell Google user data, never transfer it to advertising networks, and never use it to train generalized AI/ML models.
+                </div>
+              </div>
+
+              {/* Section 3 */}
               <div className="space-y-2">
                 <h5 className="font-bold text-forest-deep text-sm">
-                  2. How We Use Collected Data
+                  3. How We Use Collected Data
                 </h5>
                 <p className="text-xs sm:text-sm text-ink-muted">
                   We process candidate and enterprise information strictly to provide recruitment intelligence services:
@@ -134,13 +158,13 @@ export const LegalModal: React.FC<LegalModalProps> = ({
                 </ul>
               </div>
 
-              {/* Section 3 */}
-              <div className="p-4 rounded-2xl bg-forest-dark text-white space-y-2 border border-forest-border">
-                <h5 className="font-bold text-mint flex items-center gap-2 text-sm">
-                  <Shield className="w-4 h-4 text-mint" />
-                  3. Responsible AI & Model Governance Safeguards
+              {/* Section 4 */}
+              <div className="p-4 rounded-2xl bg-mist border border-border space-y-2">
+                <h5 className="font-bold text-forest-deep flex items-center gap-2 text-sm">
+                  <Shield className="w-4 h-4 text-forest" />
+                  4. Responsible AI & Model Governance Safeguards
                 </h5>
-                <p className="text-xs sm:text-sm text-sage-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-ink-muted leading-relaxed">
                   CogniHire strictly adheres to ethical AI principles:
                 </p>
                 <ul className="list-disc pl-5 space-y-1 text-xs text-sage-light">
@@ -150,10 +174,10 @@ export const LegalModal: React.FC<LegalModalProps> = ({
                 </ul>
               </div>
 
-              {/* Section 4 */}
+              {/* Section 5 */}
               <div className="space-y-2">
                 <h5 className="font-bold text-forest-deep text-sm">
-                  4. Candidate Consent & Regional Rights (GDPR, CCPA & DPDP)
+                  5. Candidate Consent & Regional Rights (GDPR, CCPA & DPDP)
                 </h5>
                 <p className="text-xs sm:text-sm text-ink-muted">
                   Candidates invited to voice screening receive upfront notification that the call is conducted by an AI interviewer and recorded for recruiter evaluation. Candidates retain the right to:
@@ -166,17 +190,17 @@ export const LegalModal: React.FC<LegalModalProps> = ({
                 </ul>
               </div>
 
-              {/* Section 5 */}
+              {/* Section 6 */}
               <div className="space-y-2">
                 <h5 className="font-bold text-forest-deep text-sm">
-                  5. Data Security, Retention & Deletion
+                  6. Data Security, Retention & Deletion
                 </h5>
                 <p className="text-xs sm:text-sm text-ink-muted">
                   All data is encrypted in transit using TLS 1.3 and at rest using AES-256 bit encryption within SOC 2 Type II compliant cloud data centers. Candidate audio and transcripts are retained for 90 days by default (or the custom duration configured by your organization) and permanently purged thereafter.
                 </p>
               </div>
 
-              {/* Section 6 */}
+              {/* Section 7 */}
               <div className="pt-2 border-t border-border text-xs text-ink-muted">
                 <p>
                   Questions about our privacy practices or candidate data requests? Contact our Data Protection Officer at{' '}
