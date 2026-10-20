@@ -5,6 +5,7 @@ import { AppDemoVideo } from '../components/AppDemoVideo';
 import { WorkflowSection } from '../components/WorkflowSection';
 import { RoiCalculator } from '../components/RoiCalculator';
 import { CandidateScorecard } from '../components/CandidateScorecard';
+import { ApplicationPurposeCompliance } from '../components/ApplicationPurposeCompliance';
 import { FAQSection } from '../components/FAQSection';
 import { FinalCTA } from '../components/FinalCTA';
 import { Footer } from '../components/Footer';
@@ -76,10 +77,13 @@ export const HomePage: React.FC = () => {
         {/* 6. Concrete Candidate Scorecard Preview */}
         <CandidateScorecard />
 
-        {/* 7. FAQ Section */}
+        {/* 7. Application Purpose & Strict Anti-NCII Compliance Policy */}
+        <ApplicationPurposeCompliance />
+
+        {/* 8. FAQ Section */}
         <FAQSection onOpenDemo={handleOpenDemo} />
 
-        {/* 8. Final High-Conversion CTA */}
+        {/* 9. Final High-Conversion CTA */}
         <FinalCTA
           onOpenDemo={handleOpenDemo}
           onScrollToCalculator={handleScrollToCalculator}

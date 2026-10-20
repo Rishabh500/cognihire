@@ -58,10 +58,10 @@ export const Hero: React.FC<HeroProps> = ({
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        {/* Category Badge */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-mist border border-border text-forest-deep text-xs sm:text-sm font-medium mb-6">
+        {/* Category & Application Purpose Badge */}
+        <div className="inline-flex flex-wrap items-center justify-center gap-2 px-4 py-1.5 rounded-full bg-mist border border-border text-forest-deep text-xs sm:text-sm font-semibold mb-6 shadow-subtle">
           <span className="w-2 h-2 rounded-full bg-forest animate-pulse" />
-          <span>AI Recruitment Automation & Candidate Intelligence</span>
+          <span>Application Purpose: Professional B2B Recruitment Screening & Consensual Candidate Intelligence</span>
         </div>
 
         {/* Primary Headline */}

@@ -218,6 +218,20 @@ export const PrivacyPolicyPage: React.FC = () => {
                   <li>Click <strong>Remove Access</strong>. Upon revocation, our platform tokens are immediately invalidated.</li>
                 </ol>
               </div>
+
+              {/* 2.7 Prohibition of AI Non-Consensual Intimate Imagery (NCII) */}
+              <div className="p-4 rounded-2xl bg-white/5 border border-forest-border space-y-2 text-xs sm:text-sm text-sage-light">
+                <h4 className="font-bold text-mint text-sm flex items-center gap-2">
+                  <AlertCircle className="w-4 h-4 text-mint shrink-0" />
+                  2.7 Strict Prohibition of AI Non-Consensual Intimate Imagery (NCII)
+                </h4>
+                <p className="leading-relaxed">
+                  In strict accordance with Google Trust & Safety Policies, CogniHire and its underlying Google API integrations maintain a zero-tolerance prohibition against the generation, uploading, hosting, processing, or distribution of <strong>Non-Consensual Intimate Imagery (NCII)</strong>, synthetic sexually explicit media, unauthorized biometric/voice cloning, or deceptive deepfakes.
+                </p>
+                <p className="leading-relaxed">
+                  CogniHire does not possess, provide, or connect to image generation or synthetic video tools for intimate imagery. Google APIs and user credentials are used solely for professional recruitment identity verification and interview calendaring.
+                </p>
+              </div>
             </section>
 
             {/* 3. General Information We Collect */}

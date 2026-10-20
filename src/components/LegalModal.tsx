@@ -138,7 +138,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({
                   >
                     Google API Services User Data Policy
                   </a>
-                  , including the Limited Use requirements. We never sell Google user data, never transfer it to advertising networks, and never use it to train generalized AI/ML models.
+                  , including the Limited Use requirements. We never sell Google user data, never transfer it to advertising networks, and never use it to train generalized AI/ML models. CogniHire strictly prohibits the use of Google APIs or platform features for AI-generated Non-Consensual Intimate Imagery (NCII), deepfakes, or unauthorized biometric impersonation.
                 </div>
               </div>
 
